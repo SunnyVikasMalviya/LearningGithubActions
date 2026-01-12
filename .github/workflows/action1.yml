@@ -1,0 +1,20 @@
+# The name of your workflow as it will appear in the GitHub UI
+name: Learning GitHub Actions
+
+# The EVENT: This tells GitHub when to run this script.
+# We are saying: "Run this every time I push code to this repo."
+on: [push]
+
+# The JOB: A workflow is made up of one or more jobs.
+jobs:
+  explore-github-actions:
+    # The RUNNER: This tells GitHub to start a fresh Ubuntu Linux computer.
+    runs-on: ubuntu-latest
+    
+    # The STEPS: The actual tasks the computer will perform.
+    steps:
+      - name: My First Step
+        run: echo "The runner is now executing a command!"
+
+      - name: Check the OS version
+        run: lsb_release -a
